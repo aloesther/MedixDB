@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patients - medixDB</title>
+
+    <link rel="stylesheet" href="../assets/css/dasboard.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+
+    <!-- Axios Library -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <section class="sidebar">
+        <div class="dashboard-sidebar">
+            <div class="logo">
+                <p>medixDB</p>
+            </div>
+            <div class="dasboard-nav">
+                <div class="main-nav">
+                    <div class="indv-nav">
+                        <a href="index.html">
+                            <img src="../assets/images/dashboard/ - black.svg">
+                            <p>Dashboard</p>
+                        </a>
+                    </div>
+                    <div class="indv-nav active">
+                        <a href="#">
+                            <img src="../assets/images/dashboard/ci_users- white.svg">
+                            <p>Patients</p>
+                        </a>
+                    </div>
+                    <div class="indv-nav">
+                        <a href="#">
+                            <img src="../assets/images/dashboard/fluent_content-view-32-regular.svg">
+                            <p>Records</p>
+                        </a>
+                    </div>
+                    <div class="indv-nav">
+                        <a href="#">
+                            <img src="../assets/images/dashboard/-8.svg">
+                            <p>Reports</p>
+                        </a>
+                    </div>
+                    <div class="indv-nav">
+                        <a href="#">
+                            <img src="../assets/images/dashboard/-7.svg">
+                            <p>Analytics</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="pages-nav">
+                    <div class="pages-nav-head">
+                        <h6>PAGES</h6>
+                    </div>
+                    <div class="pages-nav-body">
+                        <div class="indv-nav">
+                            <a href="#">
+                                <img src="../assets/images/dashboard/tabler_logs.svg">
+                                <p>Recent Activity</p>
+                            </a>
+                        </div>
+                        <div class="indv-nav">
+                            <a href="#">
+                                <img src="../assets/images/dashboard/carbon_ibm-event-automation.svg">
+                                <p>Integrations</p>
+                            </a>
+                        </div>
+                        <div class="indv-nav">
+                            <a href="#">
+                                <img src="../assets/images/dashboard/carbon_events-alt.svg">
+                                <p>Staff</p>
+                            </a>
+                        </div>
+                        <div class="indv-nav">
+                            <a href="#">
+                                <img src="../assets/images/dashboard/-3.svg">
+                                <p>Profile</p>
+                            </a>
+                        </div>
+                        <div class="indv-nav">
+                            <a href="#">
+                                <img src="../assets/images/dashboard/-4.svg">
+                                <p>Support</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="concluding-nav">
+                    <div class="indv-nav">
+                        <a href="#">
+                            <img src="../assets/images/dashboard/-1.svg">
+                            <p>Settings</p>
+                        </a>
+                    </div>
+                    <div class="indv-nav">
+                        <a class="logout-button">
+                            <img src="../assets/images/dashboard/.svg">
+                            <p>Logout</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <header>
+        <div class="dashboard-header">
+            <div class="dashboard-search">
+                <form id="dasboardsearch">
+                    <img src="../assets/images/dashboard/search.svg">
+                    <input type="search" name="boardsearch" id="boardsearch" placeholder="Patient Search">
+                </form>
+            </div>
+            <div class="dh-content">
+                <div class="notifications">
+                    <img src="../assets/images/dashboard/notification.svg">
+                </div>
+                <div class="language">
+                    <img src="../assets/images/dashboard/twemoji_flag-us-outlying-islands.svg">
+                    <select name="language" id="language">
+                        <option value="English" selected>English</option>
+                        <option value="Yoruba">Yoruba</option>
+                        <option value="Igbo">Igbo</option>
+                        <option value="Hausa">Hausa</option>
+                    </select>
+                </div>
+                <div class="user">
+                    <img src="../assets/images/dashboard/man-438081_960_720.svg">
+                    <div class="namerole">
+                        <p class="user-mainname"><span id="fulllname"></p>
+                        <p id="usertypecontent" class="userrole">Admin</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="dashboard-homepage">
+        <div class="welcome-prompt">
+            <div class="welcome">
+                <h5>Patients</h5>
+            </div>
+            <div class="new-patient">
+                <button id="add-new-patient-btn">
+                    <img src="../assets/images/dashboard/ic_round-plus.svg">
+                    <p>Add New Patient</p>
+                </button>
+                <div class="popup-overlay" id="popup-overlay"></div>
+                <div class="register-new-patient" id="register-new-patient">
+                    <div class="rnp">
+                        <div class="rnp-head">
+                            <h2>Register New Patient</h2>
+                        </div>
+                        <div class="rnp-body">
+                            <form id="registerpatient">
+                                <input type="text" name="fullname" id="fullname" placeholder="Name" required>
+                                <input type="email" name="email" id="email" placeholder="Email (optional)">
+                                <input type="phone" name="phone" id="phone" placeholder="Phone Number" required>
+                                <input type="text" name="nin" id="nin" placeholder="National Identification Number (NIN)">
+                                <button type="submit">Start Registration</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="recently-updated-records">
+            <div class="updated-records">
+                <div class="rla-head">
+                    <h3>Patients List</h3>
+                    <div class="rla-recency">
+                        <select name="rlarecency" id="rlarecency">
+                            <option disabled selected>Sort By</option>
+                            <option value="Patient Name">Patient Name</option>
+                            <option value="Patient HID">Patient HID</option>
+                            <option value="Last Updated">Last Updated</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="rur-body">
+                    <div class="rur-bhead">
+                        <p>Patient Name</p>
+                        <p>Patient HID</p>
+                        <p>Timestamp</p>
+                        <p>Updated By</p>
+                        <p>Tag</p>
+                    </div>
+                    <div class="rur-list">
+                        <div class="indv-rur">
+                            <p>Bukola Olapade</p>
+                            <p>231453689HUJ</p>
+                            <p>12.09.2024 - 12.53 PM</p>
+                            <p>Dr. Obabiyi</p>
+                            <p class="rur-tag">Surgery</p>
+                        </div>
+                        <div class="indv-rur">
+                            <p>Bukola Olapade</p>
+                            <p>231453689HUJ</p>
+                            <p>12.09.2024 - 12.53 PM</p>
+                            <p>Dr. Obabiyi</p>
+                            <p class="rur-tag">Surgery</p>
+                        </div>
+                        <div class="indv-rur">
+                            <p>Bukola Olapade</p>
+                            <p>231453689HUJ</p>
+                            <p>12.09.2024 - 12.53 PM</p>
+                            <p>Dr. Obabiyi</p>
+                            <p class="rur-tag">Surgery</p>
+                        </div>
+                        <div class="indv-rur">
+                            <p>Bukola Olapade</p>
+                            <p>231453689HUJ</p>
+                            <p>12.09.2024 - 12.53 PM</p>
+                            <p>Dr. Obabiyi</p>
+                            <p class="rur-tag">Surgery</p>
+                        </div>
+                        <div class="indv-rur">
+                            <p>Bukola Olapade</p>
+                            <p>231453689HUJ</p>
+                            <p>12.09.2024 - 12.53 PM</p>
+                            <p>Dr. Obabiyi</p>
+                            <p class="rur-tag">Surgery</p>
+                        </div>
+                        <div class="indv-rur">
+                            <p>Bukola Olapade</p>
+                            <p>231453689HUJ</p>
+                            <p>12.09.2024 - 12.53 PM</p>
+                            <p>Dr. Obabiyi</p>
+                            <p class="rur-tag">Surgery</p>
+                        </div>
+                        <div class="indv-rur">
+                            <p>Bukola Olapade</p>
+                            <p>231453689HUJ</p>
+                            <p>12.09.2024 - 12.53 PM</p>
+                            <p>Dr. Obabiyi</p>
+                            <p class="rur-tag">Surgery</p>
+                        </div>
+                        <div class="indv-rur">
+                            <p>Bukola Olapade</p>
+                            <p>231453689HUJ</p>
+                            <p>12.09.2024 - 12.53 PM</p>
+                            <p>Dr. Obabiyi</p>
+                            <p class="rur-tag">Surgery</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="smaller-screens">
+        <div class="sscreens">
+            <p>We understand your enthusiasm towards our product but at this stage we only work with bigger screens. Sorry for the inconvinience.</p>
+        </div>
+    </section>
+    <script src="../assets/js/index.js"></script>
+    <script src="../assets/js/popup.js"></script>
+    <script src="../assets/js/filldetails.js"></script>
+    <script src="../assets/js/logout.js"></script>
+</body>
+</html>
