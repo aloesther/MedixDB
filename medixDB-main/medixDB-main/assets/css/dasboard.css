@@ -1,0 +1,549 @@
+body {
+    position: relative;
+    font-family: 'Nunito Sans', sans-serif;
+    margin: 0;
+}
+
+button,
+select {
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+input::placeholder,
+option,
+select {
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    width: fit-content;
+}
+
+input {
+    display: block;
+}
+
+
+
+/* SIDEBAR */
+
+.sidebar {
+    background-color: #FFFFFF;
+    position: fixed;
+    width: 240px;
+    height: 100vh;
+    padding: 32px 20px;
+    z-index: 100;
+}
+
+.logo {
+    margin-bottom: 28px;
+}
+
+.logo p {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 800;
+    color: #000000;
+}
+
+.dasboard-nav {
+    overflow: hidden;
+}
+
+.indv-nav {
+    display: flex;
+    justify-content: center;
+}
+
+.indv-nav a {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 12px 0;
+    border-radius: 8px;
+}
+
+.indv-nav img {
+    width: 20px;
+    padding: 0 12px;
+}
+
+.indv-nav p {
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+}
+
+.active {
+    color: #FFFFFF;
+}
+
+.active a {
+    background-color: #184C99;
+}
+
+.main-nav,
+.pages-nav {
+    padding-bottom: 12px;
+    margin-bottom: 12px;
+    border-bottom: 1px solid #E0E0E0;
+}
+
+.pages-nav-head h6 {
+    padding: 0 12px;
+    color: #202224;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.257px;
+    margin-bottom: 8px;
+}
+
+
+
+
+/* HEADER */
+
+header {
+    position: fixed;
+    background-color: #FFFFFF;
+    z-index: 80;
+    overflow: hidden;
+    width: 100vw;
+}
+
+.dashboard-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 16px 0;
+}
+
+.dashboard-search form {
+    margin-left: 310px;
+    display: flex;
+    align-items: center;
+    border-radius: 19px;
+    border: 0.6px solid #D5D5D5;
+    background: #F5F6FA;
+    height: 40px;
+    width: 390px;
+}
+
+.dashboard-search img {
+    padding: 0 12px;
+}
+
+.dashboard-search input {
+    border: none;
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+    border-radius: 0 19px 19px 0;
+}
+
+.dashboard-search input::placeholder {
+    color: #202224;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.dh-content {
+    display: flex;
+    align-items: center;
+    padding-right: 50px;
+}
+
+.notifications img {
+    width: 24px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.language {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.language img {
+    width: 32px;
+    height: auto;
+    margin-right: 4px;
+}
+
+.language select {
+    width: 68px;
+    border: none;
+    background-color: transparent;
+}
+
+.user {
+    display: flex;
+    align-items: center;
+}
+
+.user img {
+    width: 40px;
+    margin-right: 12px;
+}
+
+p.user-mainname {
+    font-size: 14px;
+    font-weight: 700;
+    color: #404040;
+}
+
+p.userrole {
+    color: #565656;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+
+
+/* MAIN DASHBOARD */
+
+.dashboard-homepage {
+    background-color: #F5F6FA;
+    padding: 80px 0 60px 280px;
+}
+
+.welcome-prompt {
+    padding: 30px 30px 24px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.welcome-prompt h5 {
+    color: #202224;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.new-patient button {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 700;
+    border: none;
+    background-color: #184C99;
+    color: #FFFFFF;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.new-patient img {
+    width: 24px;
+    margin-left: -6px;
+    margin-right: 4px;
+}
+
+.dashboard-stats {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 30px 30px 30px;
+}
+
+.indv-dashstat {
+    border-radius: 14px;
+    background: #FFF;
+    box-shadow: 6px 6px 54px 0px rgba(0, 0, 0, 0.05);
+    padding: 20px;
+    margin-right: 16px;
+    width: 100%;
+}
+
+.indv-dashstat:last-of-type {
+    margin-right: 0;
+}
+
+.ids-record {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+p.ids-head {
+    color: #202224;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+p.ids-maintext {
+    color: #202224;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.ids-record img {
+    width: 54px;
+}
+
+.statrate {
+    display: flex;
+    align-items: center;
+}
+
+.statrate img {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+}
+
+.statrate p {
+    font-size: 14px;
+    font-weight: 600;
+    color: #606060;
+}
+
+span.stat-percentb {
+    color: #23A6F0;
+}
+
+span.stat-percentr {
+    color: #F93C65;
+}
+
+
+.recent-logging-activity,
+.recently-updated-records {
+    border-radius: 14px;
+    background: #FFF;
+    box-shadow: 6px 6px 54px 0px rgba(0, 0, 0, 0.05);
+    padding: 20px;
+    margin: 0 30px 30px 30px;
+}
+
+.rla-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.rla-head h3 {
+    color: #202224;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.rla-head select {
+    width: 100px;
+    border-radius: 4px;
+    border: 0.6px solid #D5D5D5;
+    background: #FCFDFD;
+    padding: 4px;
+    color: rgba(43, 48, 52, 0.40);
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.rla-body {
+    margin: 16px;
+    margin-top: 40px;
+}
+
+.rla-body img {
+    width: 100%;
+}
+
+.rur-body {
+    margin-top: 24px;
+}
+
+.rur-bhead {
+    border-radius: 12px;
+    background: #F1F4F9;
+    padding: 16px 24px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #202224;
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    margin-bottom: 8px;
+}
+
+.indv-rur {
+    padding: 16px 24px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #202224;
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    border-bottom: 0.4px solid #979797;
+}
+
+.indv-rur:last-of-type {
+    border-bottom: none;
+}
+
+.rur-tag {
+    padding: 4px 18px;
+    color: #FFFFFF;
+    background-color: #184C99;
+    width: fit-content;
+    border-radius: 12px;
+}
+
+
+
+
+/* SMALLER SCREENS */
+
+.smaller-screens {
+    display: none;
+    margin: 0 28px;
+}
+
+.smaller-screens p {
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+    color: #737373;
+}
+
+@media (max-width: 1080px) {
+    header,
+    .sidebar,
+    .dashboard-homepage {
+        display: none;
+    }
+
+    .smaller-screens {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+
+
+/* ADD NEW PATIENT */
+
+.register-new-patient {
+    display: none; 
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 28px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    color: #000000;
+    border-radius: 20px;
+}
+
+.register-new-patient.active {
+    display: block; 
+}
+
+.popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+.popup-overlay.active {
+    display: block;
+}
+
+.rnp {
+    min-width: 800px;
+    width: 100%;
+}
+
+.rnp-head h2 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.rnp-body form {
+    width: 100%;
+}
+
+.rnp-body input {
+    width: 800px;
+    height: 40px;
+    margin-bottom: 12px;
+    border-radius: 5px;
+    border: 0.5px solid #606060;
+    padding-left: 12px;
+}
+
+.rnp-body input::placeholder {
+    font-size: 14px;
+    font-weight: 700;
+    color: #737373;
+}
+
+.rnp-body button {
+    width: 100%;
+    height: 44px;
+    text-align: center;
+    justify-content: center;
+    font-size: 16px;
+}
+
+
+
+/* LOGOUT BUTTON */
+
+.logout-button {
+    cursor: pointer;
+}
+
+
+
+/* SMALLER SCREENS */
+
+.smaller-screens {
+    display: none;
+    margin: 0 28px;
+}
+
+.smaller-screens p {
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+    color: #737373;
+}
+
+@media (max-width: 1080px) {
+    header,
+    footer,
+    .hero-section,
+    .partners-section,
+    .approach-section,
+    .leading-records,
+    .pricing-plans,
+    .client-reviews,
+    .newsletter-section {
+        display: none;
+    }
+
+    .smaller-screens {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

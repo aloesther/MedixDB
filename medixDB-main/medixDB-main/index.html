@@ -1,0 +1,548 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>medixDB - Revolutionalizing Healthcare Record Management</title>
+
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- Axios Library -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="header" id="main-header">
+            <div class="inner">
+                <div class="logo">
+                    <p>medixDB</p>
+                </div>
+                <div class="main-nav">
+                    <div class="nav-link"><a href="#">Home</a></div>
+                    <div class="nav-link"><a href="#">Product</a></div>
+                    <div class="nav-link"><a href="#pricing">Pricing</a></div>
+                    <div class="nav-link"><a href="pages/contact.html">Contact</a></div>
+                </div>
+                <div class="account-nav">
+                    <div class="nav-link"><a href="pages/signin.html">Login</a></div>
+                    <div class="join-us">
+                        <a href="pages/signup.html">
+                            <p>JOIN US</p>
+                            <img src="assets/images/icn arrow-right .icn-xs.png" alt="go">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Header -->
+        <div class="mobile-header">
+            <div class="mh-logo">
+                <h2>medixDB</h2>
+            </div>
+            <div class="hambgr-menu">
+                <div class="menu-btn">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+                <div class="menu">
+                    <div class="content">
+                        <div class="mh-links">
+                            <div class="mh-link">
+                                <a href="#">
+                                    <p>Home</p>
+                                </a>
+                            </div>
+                            <div class="mh-link">
+                                <a href="#">
+                                    <p>Product </p>
+                                </a>
+                            </div>
+                            <div class="mh-link">
+                                <a href="#pricing">
+                                    <p>Pricing</p>
+                                </a>
+                            </div>
+                            <div class="mh-link">
+                                <a href="pages/contact.html">
+                                    <p>Contact</p>
+                                </a>
+                            </div>
+                            <div class="mh-link">
+                                <a href="pages/signup.html">
+                                    <p>Sign Up</p>
+                                </a>
+                            </div>
+                            <div class="mh-link">
+                                <a href="pages/signin.html">
+                                    <p>Sign In</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="hero-section">
+        <div class="floating-bar">
+            <img src="assets/images/top design 11.svg">
+        </div>
+        <div class="floating-bar2">
+            <img src="assets/images/side cut.svg">
+        </div>
+        <div class="hero-top">
+            <div class="main-descp">
+                <div class="md-content">
+                    <div class="left-hero">
+                        <div class="lh-content">
+                            <p class="section-highlight">Increasing Healthcare Productivity</p>
+                            <h1 class="hero-descp">Revolutionize Healthcare Records Management</h1>
+                            <p class="hero-follow-up">Efficient, secure, and centralized health records for healthcare facilities.</p>
+                            <div class="hero-cta">
+                                <div class="primary-cta">
+                                    <a href="pages/signup.html">
+                                        <p>Get Started Now</p>
+                                    </a>
+                                </div>
+                                <div class="secondary-cta">
+                                    <a href="https://docs.google.com/presentation/d/1QVGClUDp3DAav0GSRRxIKM2EI_Mg5Ikt/edit?usp=sharing&ouid=103366809949975943696&rtpof=true&sd=true" target="_blank">
+                                        <p>Learn More</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right-hero">
+                        <img src="assets/images/hero img.svg" alt="doctor in a whirl">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-features">
+            <div class="hero-features-list">
+                <div class="hero-indv-feature">
+                    <div class="hif-icon">
+                        <img src="assets/images/ic_round-emergency.svg" alt="icon">
+                    </div>
+                    <h4 class="hif-header">Centralized Records</h4>
+                    <div class="line"></div>
+                    <p class="hif-text">Access and update health records easily and securely.</p>
+                </div>
+                <div class="hero-indv-feature">
+                    <div class="hif-icon green">
+                        <img src="assets/images/majesticons_search.svg" alt="icon">
+                    </div>
+                    <h4 class="hif-header">Health Identification Number</h4>
+                    <div class="line"></div>
+                    <p class="hif-text">Carry all your health information with a unique number.</p>
+                </div>
+                <div class="hero-indv-feature">
+                    <div class="hif-icon grey">
+                        <img src="assets/images/ic_baseline-security.svg" alt="icon">
+                    </div>
+                    <h4 class="hif-header">Data Management</h4>
+                    <div class="line"></div>
+                    <p class="hif-text">Only authorized personnels can access and update records.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="partners-section">
+        <div class="partners-descp">
+            <div class="pdescp">
+                <div class="pd-img">
+                    <img src="assets/images/thumb-concept.svg" alt="doctor laughing in a beautiful background">
+                </div>
+                <div class="pd-texts">
+                    <div class="pd-line"></div>
+                    <h2 class="pdt-header">Trusted by Leading Healthcare Providers</h2>
+                    <p class="pdt-text">We partner with industry leaders to ensure top-notch security and efficiency in managing health records. Our collaborations with technology and healthcare giants enable us to provide seamless and reliable services.</p>
+                    <div class="pdt-cta">
+                        <a href="#">
+                            <p>Learn More</p>
+                            <img src="assets/images/icon arrow-next-blue.png" alt="next">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="partners-logos">
+            <div class="pl-brands">
+                <div class="brand">
+                    <img src="assets/images/fa-brands-1.svg" alt="brand">
+                </div>
+                <div class="brand">
+                    <img src="assets/images/fa-brands-2.svg" alt="brand">
+                </div>
+                <div class="brand">
+                    <img src="assets/images/fa-brands-3.svg" alt="brand">
+                </div>
+                <div class="brand">
+                    <img src="assets/images/fa-brands-4.svg" alt="brand">
+                </div>
+                <div class="brand">
+                    <img src="assets/images/fa-brands-5.svg" alt="brand">
+                </div>
+                <div class="brand">
+                    <img src="assets/images/fa-brands-6.svg" alt="brand">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="approach-section">
+        <div class="approach-sect">
+            <div class="asect-head">
+                <p class="section-highlight">How do we address the problems?</p>
+                <h2 class="approach-header">Our Approach</h2>
+                <p class="asect-comp-text">Enhancing healthcare efficiency through centralized and secure electronic health records management.</p>    
+            </div>
+            <div class="asect-body">
+                <div class="hero-features-list">
+                    <div class="hero-indv-feature">
+                        <div class="abf-icon">
+                            <img src="assets/images/material-symbols_e911-emergency.svg" alt="icon">
+                        </div>
+                        <h4 class="hif-header">Emergency Access</h4>
+                        <div class="line"></div>
+                        <p class="hif-text">Immediate access to critical health data in emergencies.</p>
+                    </div>
+                    <div class="hero-indv-feature">
+                        <div class="abf-icon">
+                            <img src="assets/images/mage_health-circle-fill.svg" alt="icon">
+                        </div>
+                        <h4 class="hif-header">Simplified Health Queries</h4>
+                        <div class="line"></div>
+                        <p class="hif-text">Quickly retrieve patient records with the HID.</p>
+                    </div>
+                    <div class="hero-indv-feature">
+                        <div class="abf-icon">
+                            <img src="assets/images/streamline_health-care-2-solid.svg" alt="icon">
+                        </div>
+                        <h4 class="hif-header">Improved Procedures</h4>
+                        <div class="line"></div>
+                        <p class="hif-text">Streamlined processes for better patient care.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="leading-records">
+        <div class="partners-descp">
+            <div class="pdescp">
+                <div class="pd-img">
+                    <img src="assets/images/thumb-concept-2.svg" alt="pictures of hospital management">
+                </div>
+                <div class="pd-texts">
+                    <div class="pd-line"></div>
+                    <h2 class="pdt-header">Leading the Way in Medical Records Management</h2>
+                    <p class="pdt-text">Utilizing advanced technology to provide efficient and secure health records management for better patient outcomes.</p>
+                    <div class="pdt-cta">
+                        <a href="#">
+                            <p>Learn More</p>
+                            <img src="assets/images/icon arrow-next.png" alt="next">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="pricing-plans" id="pricing">
+        <div class="pplans-sect">
+            <div class="pplans-head">
+                <p class="section-highlight">Affordable Database Management</p>
+                <h2 class="pplans-header">Flexible Pricing Plans</h2>
+                <p class="pplans-comp-text">Choose a plan that fits your healthcare facility's needs.</p>
+            </div>
+            <div class="pplans-body">
+                <div class="ppb-plan">
+                    <div class="plan-mainimg">
+                        <img src="assets/images/icon cool-icon-25.svg" alt="love">
+                    </div>
+                    <h3 class="planname">Basic</h3>
+                    <p class="plandescp">Ideal for small clinics and practices</p>
+                    <div class="plan-price">
+                        <h3 class="plan-mainprice">₦10,000</h3>
+                        <p class="plan-frequency">Per Month</p>
+                    </div>
+                    <p class="plancarter">This plan carters for a maximum database limit of 50,000 patients.</p>
+                    <div class="plan-cta">
+                        <a href="#">
+                            <p>Try for free</p>
+                        </a>
+                    </div>
+                    <div class="plan-benefits">
+                        <div class="plan-benefit">
+                            <img src="assets/images/circle.png" alt="benefit">
+                            <p>Centralized health records</p>
+                        </div>
+                        <div class="plan-benefit">
+                            <img src="assets/images/circle.png" alt="benefit">
+                            <p>Secure access controls</p>
+                        </div>
+                        <div class="plan-benefit">
+                            <img src="assets/images/circle.png" alt="benefit">
+                            <p>Basic analytics</p>
+                        </div>
+                        <div class="plan-benefit">
+                            <img src="assets/images/circle.png" alt="benefit">
+                            <p>Email support</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="ppb-plan">
+                    <div class="plan-mainimg">
+                        <img src="assets/images/icon cool-icon-25.svg" alt="love">
+                    </div>
+                    <h3 class="planname">Pro</h3>
+                    <p class="plandescp">Best for mid-sized hospitals</p>
+                    <div class="plan-price">
+                        <h3 class="plan-mainprice">₦25,000</h3>
+                        <p class="plan-frequency">Per Month</p>
+                    </div>
+                    <p class="plancarter">This plan carters for a maximum database limit of 100,000 patients.</p>
+                    <div class="plan-cta">
+                        <a href="#">
+                            <p>Subscribe</p>
+                        </a>
+                    </div>
+                    <div class="plan-benefits">
+                        <div class="plan-benefit">
+                            <img src="assets/images/circle.png" alt="benefit">
+                            <p>All Basic features</p>
+                        </div>
+                        <div class="plan-benefit">
+                            <img src="assets/images/circle.png" alt="benefit">
+                            <p>Advanced analytics</p>
+                        </div>
+                        <div class="plan-benefit">
+                            <img src="assets/images/circle.png" alt="benefit">
+                            <p>API Access</p>
+                        </div>
+                        <div class="plan-benefit">
+                            <img src="assets/images/circle.png" alt="benefit">
+                            <p>Priority support</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="ppb-plan">
+                    <div class="plan-mainimg">
+                        <img src="assets/images/icon cool-icon-25.svg" alt="love">
+                    </div>
+                    <h3 class="planname">Enterprise</h3>
+                    <p class="plandescp">Best for large healthcare networks</p>
+                    <div class="plan-price">
+                        <h3 class="plan-mainprice">₦---</h3>
+                        <p class="plan-frequency">Custom Pricing</p>
+                    </div>
+                    <p class="plancarter">This plan carters for a minimum database of 100,000 patients.</p>
+                    <div class="plan-cta">
+                        <a href="#">
+                            <p>Reach out to us</p>
+                        </a>
+                    </div>
+                    <div class="plan-benefits">
+                        <div class="plan-benefit">
+                            <img src="assets/images/circle.png" alt="benefit">
+                            <p>All Pro features</p>
+                        </div>
+                        <div class="plan-benefit">
+                            <img src="assets/images/circle.png" alt="benefit">
+                            <p>Custom integrations</p>
+                        </div>
+                        <div class="plan-benefit">
+                            <img src="assets/images/circle.png" alt="benefit">
+                            <p>Dedicated account manager</p>
+                        </div>
+                        <div class="plan-benefit">
+                            <img src="assets/images/circle.png" alt="benefit">
+                            <p>Full analytics suite</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="client-reviews">
+        <div class="reviews">
+            <div class="asect-head">
+                <p class="section-highlight">What do they say about us?</p>
+                <h2 class="approach-header">Hear from Our Clients</h2>
+                <p class="asect-comp-text">We revel in providing the best service for every user and they see it.</p>    
+            </div>
+            <div class="hero-features-list reviews-body">
+                <div class="hero-indv-feature indv-review">
+                    <div class="stars">
+                        <img src="assets/images/icn bxs-star.svg" alt="star">
+                        <img src="assets/images/icn bxs-star.svg" alt="star">
+                        <img src="assets/images/icn bxs-star.svg" alt="star">
+                        <img src="assets/images/icn bxs-star.svg" alt="star">
+                        <img src="assets/images/icn bxs-star.svg" alt="star">
+                    </div>
+                    <p class="hif-text review-text">medixDB has transformed our record-keeping, making it faster and more secure.</p>
+                    <div class="reviewer">
+                        <img src="assets/images/testimonial-user-cover-167.svg" alt="reviewer">
+                        <div class="reviewer-name">
+                            <p class="rev-name">Dr. John Smith</p>
+                            <p class="rev-role">Chief Medical Officer</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-indv-feature indv-review">
+                    <div class="stars">
+                        <img src="assets/images/icn bxs-star.svg" alt="star">
+                        <img src="assets/images/icn bxs-star.svg" alt="star">
+                        <img src="assets/images/icn bxs-star.svg" alt="star">
+                        <img src="assets/images/icn bxs-star.svg" alt="star">
+                        <img src="assets/images/icn bxs-star.svg" alt="star">
+                    </div>
+                    <p class="hif-text review-text">The Health Identification Number simplifies everything. No more lost records.</p>
+                    <div class="reviewer">
+                        <img src="assets/images/testimonial-user-cover-169.svg" alt="reviewer">
+                        <div class="reviewer-name">
+                            <p class="rev-name">Dr. Emily Johnson</p>
+                            <p class="rev-role">Clinic Director</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-indv-feature indv-review">
+                    <div class="stars">
+                        <img src="assets/images/icn bxs-star.svg" alt="star">
+                        <img src="assets/images/icn bxs-star.svg" alt="star">
+                        <img src="assets/images/icn bxs-star.svg" alt="star">
+                        <img src="assets/images/icn bxs-star.svg" alt="star">
+                        <img src="assets/images/icn bxs-star.svg" alt="star">
+                    </div>
+                    <p class="hif-text review-text">Excellent support and seamless integration with our existing systems, works like magic.</p>
+                    <div class="reviewer">
+                        <img src="assets/images/testimonial-user-cover-169-1.svg" alt="reviewer">
+                        <div class="reviewer-name">
+                            <p class="rev-name">Dr. Michael Lee</p>
+                            <p class="rev-role">Hospital Administrator</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="newsletter-section">
+        <div class="newsletter">
+            <div class="newsletter-head">
+                <p class="section-highlight">Newsletter</p>
+                <h2 class="newsletter-header">Join the Future of Healthcare</h2>
+                <p class="newsletter-comp-text">Sign up for updates and be the first to know about new features and services.</p>
+            </div>
+            <div class="newsletter-body">
+                <form id="newsletter-subcribe">
+                    <input type="email" id="news-email" placeholder="Your Email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer">
+            <div class="footer-links">
+                <div class="flink-group">
+                    <p class="flink-head">Company Info</p>
+                    <div class="flink">
+                        <a href="#"><p>About Us</p></a>
+                    </div>
+                    <div class="flink">
+                        <a href="#"><p>Careers</p></a>
+                    </div>
+                    <div class="flink">
+                        <a href="#"><p>Blog</p></a>
+                    </div>
+                </div>
+                <div class="flink-group">
+                    <p class="flink-head">Legal</p>
+                    <div class="flink">
+                        <a href="#"><p>Privacy Policy</p></a>
+                    </div>
+                    <div class="flink">
+                        <a href="#"><p>Terms of Service</p></a>
+                    </div>
+                </div>
+                <div class="flink-group">
+                    <p class="flink-head">Features</p>
+                    <div class="flink">
+                        <a href="#"><p>Centralized Base</p></a>
+                    </div>
+                    <div class="flink">
+                        <a href="#"><p>User Analytic</p></a>
+                    </div>
+                    <div class="flink">
+                        <a href="#"><p>HID</p></a>
+                    </div>
+                    <div class="flink">
+                        <a href="#"><p>Unlimited Support</p></a>
+                    </div>
+                </div>
+                <div class="flink-group">
+                    <p class="flink-head">Resources</p>
+                    <div class="flink">
+                        <a href="#"><p>IOS & Android</p></a>
+                    </div>
+                    <div class="flink">
+                        <a href="#"><p>Watch a Demo</p></a>
+                    </div>
+                    <div class="flink">
+                        <a href="#"><p>API</p></a>
+                    </div>
+                </div>
+                <div class="flink-group">
+                    <p class="flink-head">Get In Touch</p>
+                    <div class="flink contact">
+                        <a href="#">
+                            <img src="assets/images/bx_bx-phone.svg" alt="phone">
+                            <p>+2347088982988</p>
+                        </a>
+                    </div>
+                    <div class="flink contact">
+                        <a href="#">
+                            <img src="assets/images/bx_bx-map.svg" alt="location">
+                            <p>University of Ibadan, Nigeria</p>
+                        </a>
+                    </div>
+                    <div class="flink contact">
+                        <a href="#">
+                            <img src="assets/images/carbon_send-alt.svg" alt="email">
+                            <p>bukola@medixdb.com</p>
+                        </a>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="fbottom">
+                    <p class="copyright">Copyright 2024 All Right Reserved</p>
+                    <div class="socials">
+                        <div class="social-link">
+                            <a href="#">
+                                <img src="assets/images/ant-design_facebook-filled.svg" alt="social">
+                            </a>
+                        </div>
+                        <div class="social-link">
+                            <a href="#">
+                                <img src="assets/images/ant-design_instagram-outlined.svg" alt="social">
+                            </a>
+                        </div>
+                        <div class="social-link">
+                            <a href="#">
+                                <img src="assets/images/ant-design_twitter-outlined.svg" alt="social">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="../assets/js/index.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/mobile-header.js"></script>
+</body>
+</html>

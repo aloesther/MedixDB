@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - medixDB</title>
+
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- Axios Library -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="header" id="main-header">
+            <div class="inner">
+                <div class="logo">
+                    <p>medixDB</p>
+                </div>
+                <div class="main-nav">
+                    <div class="nav-link"><a href="../index.html">Home</a></div>
+                    <div class="nav-link"><a href="#">Product</a></div>
+                    <div class="nav-link"><a href="../index.html#pricing">Pricing</a></div>
+                    <div class="nav-link"><a href="#">Contact</a></div>
+                </div>
+                <div class="account-nav">
+                    <div class="nav-link"><a href="signin.html">Login</a></div>
+                    <div class="join-us">
+                        <a href="signup.html">
+                            <p>JOIN US</p>
+                            <img src="../assets/images/icn arrow-right .icn-xs.png" alt="go">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Header -->
+        <div class="mobile-header">
+            <div class="mh-logo">
+                <h2>medixDB</h2>
+            </div>
+            <div class="hambgr-menu">
+                <div class="menu-btn">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+                <div class="menu">
+                    <div class="content">
+                        <div class="mh-links">
+                            <div class="mh-link">
+                                <a href="../index.html">
+                                    <p>Home</p>
+                                </a>
+                            </div>
+                            <div class="mh-link">
+                                <a href="#">
+                                    <p>Product </p>
+                                </a>
+                            </div>
+                            <div class="mh-link">
+                                <a href="../index.html#pricing">
+                                    <p>Pricing</p>
+                                </a>
+                            </div>
+                            <div class="mh-link">
+                                <a href="#">
+                                    <p>Contact</p>
+                                </a>
+                            </div>
+                            <div class="mh-link">
+                                <a href="signup.html">
+                                    <p>Sign Up</p>
+                                </a>
+                            </div>
+                            <div class="mh-link">
+                                <a href="signin.html">
+                                    <p>Sign In</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="hero-section">
+        <div class="floating-bar">
+            <img src="../assets/images/top design 11.svg">
+        </div>
+        <div class="floating-bar2">
+            <img src="../assets/images/side cut.svg">
+        </div>
+        <div class="hero-top">
+            <div class="main-descp">
+                <div class="md-content">
+                    <div class="left-hero">
+                        <div class="lh-content signincontent">
+                            <p class="section-highlight">Send Us A Message</p>
+                            <h2 class="hero-descp">Contact Us</h2>
+                            <div class="signin-form">
+                                <form id="contactform">
+                                    <input type="text" id="contactname" placeholder="Name" required>
+                                    <input type="email" id="contactemail" placeholder="Email Address" required>
+                                    <textarea name="contactmessage" id="contactmessage" placeholder="Enter Your Message" required></textarea>
+                                    <button type="submit" id="contact-submit">Send Message</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right-hero">
+                        <img src="../assets/images/hero img.svg" alt="doctor in a whirl">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer">
+            <div class="footer-links">
+                <div class="flink-group">
+                    <p class="flink-head">Company Info</p>
+                    <div class="flink">
+                        <a href="#"><p>About Us</p></a>
+                    </div>
+                    <div class="flink">
+                        <a href="#"><p>Careers</p></a>
+                    </div>
+                    <div class="flink">
+                        <a href="#"><p>Blog</p></a>
+                    </div>
+                </div>
+                <div class="flink-group">
+                    <p class="flink-head">Legal</p>
+                    <div class="flink">
+                        <a href="#"><p>Privacy Policy</p></a>
+                    </div>
+                    <div class="flink">
+                        <a href="#"><p>Terms of Service</p></a>
+                    </div>
+                </div>
+                <div class="flink-group">
+                    <p class="flink-head">Features</p>
+                    <div class="flink">
+                        <a href="#"><p>Centralized Base</p></a>
+                    </div>
+                    <div class="flink">
+                        <a href="#"><p>User Analytic</p></a>
+                    </div>
+                    <div class="flink">
+                        <a href="#"><p>HID</p></a>
+                    </div>
+                    <div class="flink">
+                        <a href="#"><p>Unlimited Support</p></a>
+                    </div>
+                </div>
+                <div class="flink-group">
+                    <p class="flink-head">Resources</p>
+                    <div class="flink">
+                        <a href="#"><p>IOS & Android</p></a>
+                    </div>
+                    <div class="flink">
+                        <a href="#"><p>Watch a Demo</p></a>
+                    </div>
+                    <div class="flink">
+                        <a href="#"><p>API</p></a>
+                    </div>
+                </div>
+                <div class="flink-group">
+                    <p class="flink-head">Get In Touch</p>
+                    <div class="flink contact">
+                        <a href="#">
+                            <img src="../assets/images/bx_bx-phone.svg" alt="phone">
+                            <p>+2347088982988</p>
+                        </a>
+                    </div>
+                    <div class="flink contact">
+                        <a href="#">
+                            <img src="../assets/images/bx_bx-map.svg" alt="location">
+                            <p>University of Ibadan, Nigeria</p>
+                        </a>
+                    </div>
+                    <div class="flink contact">
+                        <a href="#">
+                            <img src="../assets/images/carbon_send-alt.svg" alt="email">
+                            <p>bukola@medixdb.com</p>
+                        </a>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="fbottom">
+                    <p class="copyright">Copyright 2024 All Right Reserved</p>
+                    <div class="socials">
+                        <div class="social-link">
+                            <a href="#">
+                                <img src="../assets/images/ant-design_facebook-filled.svg" alt="social">
+                            </a>
+                        </div>
+                        <div class="social-link">
+                            <a href="#">
+                                <img src="../assets/images/ant-design_instagram-outlined.svg" alt="social">
+                            </a>
+                        </div>
+                        <div class="social-link">
+                            <a href="#">
+                                <img src="../assets/images/ant-design_twitter-outlined.svg" alt="social">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="../assets/js/index.js"></script>
+    <script src="../assets/js/script.js"></script>
+    <script src="../assets/js/mobile-header.js"></script>
+    <script src="../assets/js/contact.js"></script>
+</body>
+</html>
